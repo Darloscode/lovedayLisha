@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Flowers</title>
+</head>
+
+<body>
+    <div class="greetings">
+        <span>¡TE</span>
+        <span>AMO</span>
+        <span>DEMASIADO!</span>
+    </div>
+    <div class="description">
+        <span id="mensaje">MI AMADA LISHA, ¿QUISIERAS SER MI SAN VALENTIN?</span>
+    </div>
+    <div class="button">
+        <button class="botones">
+            <a href='/flower.html' style='color: #fff;'>SI!! Obvio que SÍ</a>
+        </button>
+        <button id="respuesta_no" class="boton_no"><a style='color: #fff;'>NO QUIRO</a></button>
+    </div>
+    
+    <script>
+        const botonNo = document.getElementById("respuesta_no");
+        
+        botonNo.addEventListener("mouseenter", () => {
+            const maxWidth = window.innerWidth - botonNo.clientWidth;
+            const maxHeight = window.innerHeight - botonNo.clientHeight;
+            
+            const newX = Math.random() * maxWidth;
+            const newY = Math.random() * maxHeight;
+            
+            botonNo.style.left = `${newX}px`;
+            botonNo.style.top = `${newY}px`;
+        });
+    </script>
+</body>
+
+</html>
